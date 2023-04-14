@@ -478,41 +478,22 @@ def specialActions(result):
             print("\tAction\t= ", str.capitalize(result), "\n")
             #result = str.lower(input("Enter behaviour result here for a definition: "))
             secondaryAction = ""
-            if result=="sneak":
-                action = list_actions[result]
-            elif result=="hold":
-                action = list_actions[result]
-            elif result=="fall back":
-                action = list_actions[result]
-            elif result=="advance":
-                action = list_actions[result]
-            elif result=="aim":
-                action = list_actions[result]
-            elif result=="charge":
-                action = list_actions[result]
-            elif result=="onslaught":
-                action = list_actions[result]
-            elif result=="alert":
+            # only the ones w/ secondary actions need special handling
+            if result=="alert":
                 action = list_actions[result]
                 secondaryAction = "onslaught"
             elif result=="rush":
                 action = list_actions[result]
                 secondaryAction = "charge"
-            elif result=="overcharge":
-                action = list_actions[result]
             elif result=="recharge":
                 action = list_actions[result]
                 secondaryAction = "advance"
-            elif result=="disrupt":
-                action = list_actions[result]
             elif result=="regenerate":
                 action = list_actions[result]
                 secondaryAction = "disrupt"
             elif result=="empower":
                 action = list_actions[result]
                 secondaryAction = "disrupt"
-            elif result=="annihilate":
-                action = list_actions[result]
             elif result=="rapid fire":
                 action = list_actions[result]
                 secondaryAction = "onslaught"
@@ -523,7 +504,7 @@ def specialActions(result):
                 action = list_actions[result]
                 secondaryAction = "onslaught"
             else:
-                action = ""
+                action = list_actions[result]
             print(action)
             result = secondaryAction
 
