@@ -121,7 +121,6 @@ def Enemy():
             else:
                 return("Alert")
     
-
     #Type is TraitorGuardsman
     elif InstanceEnemy=='3':
         print('Traitor Guardsman')
@@ -478,27 +477,21 @@ def specialActions(result):
             print()
             print("\tAction\t= ", str.capitalize(result), "\n")
             #result = str.lower(input("Enter behaviour result here for a definition: "))
+            secondaryAction = ""
             if result=="sneak":
                 action = list_actions[result]
-                secondaryAction = ""
             elif result=="hold":
                 action = list_actions[result]
-                secondaryAction = ""
             elif result=="fall back":
                 action = list_actions[result]
-                secondaryAction = ""
             elif result=="advance":
                 action = list_actions[result]
-                secondaryAction = ""
             elif result=="aim":
                 action = list_actions[result]
-                secondaryAction = ""
             elif result=="charge":
                 action = list_actions[result]
-                secondaryAction = ""
             elif result=="onslaught":
                 action = list_actions[result]
-                secondaryAction = ""
             elif result=="alert":
                 action = list_actions[result]
                 secondaryAction = "onslaught"
@@ -507,13 +500,11 @@ def specialActions(result):
                 secondaryAction = "charge"
             elif result=="overcharge":
                 action = list_actions[result]
-                secondaryAction = ""
             elif result=="recharge":
                 action = list_actions[result]
                 secondaryAction = "advance"
             elif result=="disrupt":
                 action = list_actions[result]
-                secondaryAction = ""
             elif result=="regenerate":
                 action = list_actions[result]
                 secondaryAction = "disrupt"
@@ -522,7 +513,6 @@ def specialActions(result):
                 secondaryAction = "disrupt"
             elif result=="annihilate":
                 action = list_actions[result]
-                secondaryAction = ""
             elif result=="rapid fire":
                 action = list_actions[result]
                 secondaryAction = "onslaught"
