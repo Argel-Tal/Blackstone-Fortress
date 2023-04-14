@@ -13,6 +13,9 @@ produces an RNG result for any unit type
 based on user input
 '''
 def Enemy():
+    #generate dice roll
+    roll=random.randint(1,20)
+    # ask user for enemy type
     print('Enemy Types:\n\nUrGhul\t \t \t1\nSpindleDrone\t\t2\nTraitorGuardsman\t3\nRoguePsyker\t\t4\nNegavoltCultist\t\t5\nChaosBeastman\t\t6\nChaosSpaceMarine\t7\nObsidiusMallex\t\t8\n')
     InstanceEnemy=input("Enter the Enemy Type: ")
     InstanceEnemy = str(InstanceEnemy)
@@ -21,11 +24,9 @@ def Enemy():
     #Type is Ur-Ghul
     if InstanceEnemy=='1':
         print('Ur-Ghul')
-    #generate dice roll
-        roll=random.randint(1,20)
         status=input("Enter the status: \n\t\n\tHidden\t= 1,\n\tEngaged\t= 2,\n\tClose\t= 3,\n\tOther *\t")
         print()
-        print("roll\t= "+str(roll))
+        print("roll\t= "+str(roll)) # apply dice roll from earlier
     #conditionals
         if status == '1':
             print('Status\t= Hidden')
@@ -66,11 +67,9 @@ def Enemy():
     #Type is Spindle Drone
     elif InstanceEnemy=='2':
         print('Spindle Drone')
-        #generate dice roll
-        roll=random.randint(1,20)
         status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tIn Cover = 3,\n\tClose = 4,\n\tOther *\t")
         print()
-        print("roll\t= "+str(roll))
+        print("roll\t= "+str(roll)) # apply dice roll from earlier
     #conditionals
         if status == '1':
             print('Status\t= Hidden')
@@ -128,11 +127,9 @@ def Enemy():
     #Type is TraitorGuardsman
     elif InstanceEnemy=='3':
         print('Traitor Guardsman')
-        #generate dice roll
-        roll=random.randint(1,20)
         status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tIn Cover w/ Lasgun = 3,\n\tClose = 4,\n\tOther *\t")
         print()
-        print("roll\t= "+str(roll))
+        print("roll\t= "+str(roll)) # apply dice roll from earlier
     #conditionals
         if status == '1':
             print('Status\t= Hidden')
@@ -190,11 +187,9 @@ def Enemy():
     #Type is Rogue Psyker
     elif InstanceEnemy=='4':
         print('Rogue Psyker')
-        #generate dice roll
-        roll=random.randint(1,20)
         status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tClose = 3,\n\tOther *\t")
         print()
-        print("roll\t= "+str(roll))
+        print("roll\t= "+str(roll)) # apply dice roll from earlier
     #conditionals
         if status == '1':
             print('Status\t= Hidden')
@@ -245,11 +240,9 @@ def Enemy():
     #Type is Negavolt Cultist
     elif InstanceEnemy=='5':
         print('Negavolt Cultist')
-        #generate dice roll
-        roll=random.randint(1,20)
         status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tOther *\t")
         print()
-        print("roll\t= "+str(roll))
+        print("roll\t= "+str(roll)) # apply dice roll from earlier
     #conditionals
         if status == '1':
             print('Status\t= Hidden')
@@ -283,11 +276,9 @@ def Enemy():
     #Type is ChaosBeastman
     elif InstanceEnemy=='6':
         print('Chaos Beastman')
-        #generate dice roll
-        roll=random.randint(1,20)
         status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tClose = 3,\n\tOther *\t")
         print()
-        print("roll\t= "+str(roll))
+        print("roll\t= "+str(roll)) # apply dice roll from earlier
     #conditionals
         if status == '1':
             print('Status\t= Hidden')
@@ -328,11 +319,9 @@ def Enemy():
 	#Type is Chaos Space Marine
     elif InstanceEnemy=='7':
         print('Chaos Space Marine')
-        #generate dice roll
-        roll=random.randint(1,20)
         status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tIn Cover = 3,\n\tClose = 4,\n\tOther *\t")
         print()
-        print("roll\t= "+str(roll))
+        print("roll\t= "+str(roll)) # apply dice roll from earlier
     #conditionals
         if status == '1':
             print('Status\t= Hidden')
@@ -387,11 +376,9 @@ def Enemy():
     #Type is ObsidiusMallex
     elif InstanceEnemy=='8':
         print('Obsidius Mallex')
-        #generate dice roll
-        roll=random.randint(1,20)
         status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tIn Cover w/ Lasgun = 3,\n\tClose = 4,\n\tOther *\t")
         print()
-        print("roll\t= "+str(roll))
+        print("roll\t= "+str(roll)) # apply dice roll from earlier
     #conditionals
         if status == '1':
             print('Status\t= Hidden')
@@ -445,7 +432,6 @@ def Enemy():
                 return("Overcharge")
             else:
                 return("Rush")
-    
     # Otheriwse exit
     else:
         return
@@ -486,7 +472,6 @@ def specialActions(result):
             # make some whitespace
             print()
             print("\tAction\t= ", str.capitalize(result), "\n")
-            #result = str.lower(input("Enter behaviour result here for a definition: "))
             secondaryAction = ""
             # only the ones w/ secondary actions need special handling
             if result=="alert":
@@ -514,7 +499,7 @@ def specialActions(result):
                 action = list_actions[result]
                 secondaryAction = "onslaught"
             else:
-                action = list_actions[result]
+                action = list_actions[result] # no special handling needed bc no secondary
             print(action)
             result = secondaryAction
         # end while
