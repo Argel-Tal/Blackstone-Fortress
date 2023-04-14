@@ -21,7 +21,7 @@ def Enemy():
         print('Ur-Ghul')
     #generate dice roll
         roll=random.randint(1,20)
-        status=input("Enter the status: \n\tHidden\t= 1, \n\tEngaged\t= 2, \n\tClose\t= 3, \n\tOther\t*\n")
+        status=input("Enter the status: \n\t\n\tHidden\t= 1,\n\tEngaged\t= 2,\n\tClose\t= 3,\n\tOther\t*\n")
         print("roll\t= "+str(roll))
     #conditionals
         if status == '1':
@@ -65,7 +65,7 @@ def Enemy():
         print('Spindle Drone')
         #generate dice roll
         roll=random.randint(1,20)
-        status=input("Enter the status: Hidden = 1, Engaged = 2, In Cover = 3, Close = 4, Other *   ")
+        status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tIn Cover = 3,\n\tClose = 4,\n\tOther *\t")
         print("roll\t= "+str(roll))
     #conditionals
         if status == '1':
@@ -127,7 +127,7 @@ def Enemy():
         print('Traitor Guardsman')
         #generate dice roll
         roll=random.randint(1,20)
-        status=input("Enter the status: Hidden = 1, Engaged = 2, In Cover w/ Lasgun = 3, Close = 4, Other *   ")
+        status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tIn Cover w/ Lasgun = 3,\n\tClose = 4,\n\tOther *\t")
         print("roll\t= "+str(roll))
     #conditionals
         if status == '1':
@@ -188,7 +188,7 @@ def Enemy():
         print('Rogue Psyker')
         #generate dice roll
         roll=random.randint(1,20)
-        status=input("Enter the status: Hidden = 1, Engaged = 2, Close = 3, Other *   ")
+        status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tClose = 3,\n\tOther *\t")
         print("roll\t= "+str(roll))
     #conditionals
         if status == '1':
@@ -242,7 +242,7 @@ def Enemy():
         print('Negavolt Cultist')
         #generate dice roll
         roll=random.randint(1,20)
-        status=input("Enter the status: Hidden = 1, Engaged = 2, Other *   ")
+        status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tOther *\t")
         print("roll\t= "+str(roll))
     #conditionals
         if status == '1':
@@ -279,7 +279,7 @@ def Enemy():
         print('Chaos Beastman')
         #generate dice roll
         roll=random.randint(1,20)
-        status=input("Enter the status: Hidden = 1, Engaged = 2, Close = 3, Other *   ")
+        status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tClose = 3,\n\tOther *\t")
         print("roll\t= "+str(roll))
     #conditionals
         if status == '1':
@@ -323,7 +323,7 @@ def Enemy():
         print('Chaos Space Marine')
         #generate dice roll
         roll=random.randint(1,20)
-        status=input("Enter the status: Hidden = 1, Engaged = 2, In Cover = 3, Close = 4, Other *   ")
+        status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tIn Cover = 3,\n\tClose = 4,\n\tOther *\t")
         print("roll\t= "+str(roll))
     #conditionals
         if status == '1':
@@ -381,7 +381,7 @@ def Enemy():
         print('Obsidius Mallex')
         #generate dice roll
         roll=random.randint(1,20)
-        status=input("Enter the status: Hidden = 1, Engaged = 2, In Cover w/ Lasgun = 3, Close = 4, Other *   ")
+        status=input("Enter the status: \n\tHidden = 1,\n\tEngaged = 2,\n\tIn Cover w/ Lasgun = 3,\n\tClose = 4,\n\tOther *\t")
         print("roll\t= "+str(roll))
     #conditionals
         if status == '1':
@@ -451,6 +451,7 @@ def specialActions(result):
     if result is None:
             action = ""
     else: 
+        print("Action\t= ", result, "\n")
         result = str.lower(result)
     #result = str.lower(input("Enter behaviour result here for a definition: "))
     if result=="sneak":
